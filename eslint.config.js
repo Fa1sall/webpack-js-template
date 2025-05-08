@@ -1,32 +1,18 @@
 // eslint.config.js
-
-import eslintPluginPrettier from 'eslint-plugin-prettier';
-import prettierConfig from 'eslint-config-prettier';
+import js from "@eslint/js";
 
 export default [
+  js.configs.recommended,
   {
-    files: ['**/*.js', '**/*.jsx'],
+    files: ["**/*.js", "**/*.jsx"],
     languageOptions: {
       ecmaVersion: 2022,
-      sourceType: 'module',
-    },
-    plugins: {
-      prettier: eslintPluginPrettier,
+      sourceType: "module",
     },
     rules: {
-      // Your custom ESLint rules
-      'no-unused-vars': 'warn',
-      'no-undef': 'warn',
-      'no-console': 'off',
-
-      // Prettier integration
-      'prettier/prettier': 'error',
-    },
-  },
-  // Disable conflicting rules with Prettier
-  {
-    rules: {
-      ...prettierConfig.rules,
+      "no-unused-vars": "warn",
+      "no-undef": "warn",
+      "no-console": "off",
     },
   },
 ];
