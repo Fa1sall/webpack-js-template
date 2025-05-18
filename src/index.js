@@ -1,2 +1,2 @@
-import './styles/reset';
-import '.styles/styles';
+import "./styles/reset";
+import "./styles/styles";
