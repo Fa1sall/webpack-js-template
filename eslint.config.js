@@ -8,6 +8,9 @@ export default [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
+      globals: {
+        ...js.environments.browser.globals,
+      },
     },
     rules: {
       "no-unused-vars": "warn",
